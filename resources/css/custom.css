@@ -36,7 +36,7 @@ body {
 
 /* Background */
 .background {
-    background-image: url("/images/dashboard.png"); /* Gambar latar */
+    background-image: url('../../public/images/dashboard.png'); /* Gambar latar */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
@@ -48,7 +48,7 @@ body {
 
 .search-section {
     position: absolute; /* Gunakan posisi absolut agar bebas mengatur letak */
-    left: 350px; /* Sesuaikan jarak dari tepi kiri */
+    left: 20%; /* Sesuaikan jarak dari tepi kiri */
     top: 63%; /* Tempatkan di tengah secara vertikal */
     transform: translateY(-50%); /* Koreksi agar benar-benar di tengah */
     display: flex;

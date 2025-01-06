@@ -43,5 +43,17 @@ Route::get('/map', function () {
     return view('map');
 })->name('map');
 
+use App\Http\Controllers\KlinikController;
+
+// Menambahkan data klinik
+Route::post('/klinik', [KlinikController::class, 'store']);
+
+// Mengupdate data klinik
+Route::put('/klinik/{id}', [KlinikController::class, 'update']);
+
+// Menghapus data klinik
+Route::delete('/klinik/{id}', [KlinikController::class, 'destroy']);
+
+
 
 require __DIR__.'/auth.php';
