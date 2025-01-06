@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/detail', function () {
+    return view('detail');
+})->name('detail');
+
 Route::get('/explore', function () {
     return view('explore');
 })->name('explore');
@@ -43,7 +47,17 @@ Route::get('/map', function () {
     return view('map');
 })->name('map');
 
+Route::get('/ulasan', function () {
+    return view('ulasan');
+})->name('ulasan');
+
+Route::get('/explore/detail', function () {
+    return view('detail');
+})->name('detail');
+
+
 use App\Http\Controllers\KlinikController;
+Route::get('/api/klinik-data', [KlinikController::class, 'getKlinikData']);
 
 // Menambahkan data klinik
 Route::post('/klinik', [KlinikController::class, 'store']);

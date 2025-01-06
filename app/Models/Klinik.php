@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Klinik extends Model
 {
+    use HasFactory;
+
+    protected $table = 'klinik';
     protected $casts = [
-        'data' => 'array', // Laravel akan otomatis mengkonversi data JSON menjadi array atau objek
+        'data' => 'array', // Mengkonversi kolom json menjadi array
     ];
 
 }

@@ -1,0 +1,472 @@
+[
+    {
+        "No":1,
+        "Nama Klinik":"Klinik Dr Misbah Yosudarso",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5620424109,
+        "Bujur":101.4329117321,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Bisa rawat inap, \nUmum start 50\nSpesialis start 120\nTindak lanjut bisa rawat inap",
+        "Rating":"3,6"
+    },
+    {
+        "No":2,
+        "Nama Klinik":"Klinik Dr Misbah Sembilang",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5670203491,
+        "Bujur":101.449391225,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":"3,0"
+    },
+    {
+        "No":3,
+        "Nama Klinik":"Klinik Pratama Pramuka",
+        "Jam Operasional":"07.30\u201322.30",
+        "Lintang":0.5716549774,
+        "Bujur":101.4497345478,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":"3,2"
+    },
+    {
+        "No":4,
+        "Nama Klinik":"Klinik Utama Mutiara Hati",
+        "Jam Operasional":"17.00-18.00",
+        "Lintang":0.5625573703,
+        "Bujur":101.450249532,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"UGD start from 30\nPoli gigi 50\nPoli anak 100\nUsg 2d 130\nUsg 4d 150\nVag 170",
+        "Rating":"5,0"
+    },
+    {
+        "No":5,
+        "Nama Klinik":"KLINIK PRATAMA BUNDA MEDICAL CENTRE (BMC)",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5702817546,
+        "Bujur":101.4430397538,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Poli spesialis 120 umum\nIGD 120 gada BPJS\nKesehatan sekelutuhan 65k",
+        "Rating":"4,7"
+    },
+    {
+        "No":6,
+        "Nama Klinik":"Klinik Rumbai Sehat",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5623857172,
+        "Bujur":101.4456146746,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Cek kesehatan 30 \nKarang gigi start 200\nBelobang start 150\nUmum start 50",
+        "Rating":"2,5"
+    },
+    {
+        "No":7,
+        "Nama Klinik":"Tatjana Dental Care",
+        "Jam Operasional":"09.30\u201321.00",
+        "Lintang":0.5605603199,
+        "Bujur":101.4335191058,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Tambal gigi start 200\nKarang gigi start 150",
+        "Rating":"baru buka seminggu"
+    },
+    {
+        "No":8,
+        "Nama Klinik":"Klinik Pratama Berjaya Medika",
+        "Jam Operasional":"08.00\u201321.00",
+        "Lintang":0.5650978573,
+        "Bujur":101.4313458728,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50, klo kek biasa atau umum atau kitanan itu kerja sama dan pasien yg kesana",
+        "Rating":"2,0"
+    },
+    {
+        "No":9,
+        "Nama Klinik":"Klinik Utama Pramita",
+        "Jam Operasional":"06:00 - 21:00",
+        "Lintang":0.50107308,
+        "Bujur":101.45295042,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from Rp100.000 - 11.000.000\nJuga tersedia Paket Blue dan Silver dan Paket Gold hingga platinum mulai dari Rp1.000.000",
+        "Rating":3.8
+    },
+    {
+        "No":10,
+        "Nama Klinik":"Klinik Utama IMOM",
+        "Jam Operasional":"15.00\u201320.00",
+        "Lintang":0.53892305,
+        "Bujur":101.42136072,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Periksa kehamilan (USG) berkisar Rp100.000 - Rp500.000",
+        "Rating":5
+    },
+    {
+        "No":11,
+        "Nama Klinik":"Klinik Utama Nusa Lima",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5127949,
+        "Bujur":101.4611877,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Untuk General Check-Up Start from Rp.150.000",
+        "Rating":4.6
+    },
+    {
+        "No":13,
+        "Nama Klinik":"Klinik Pratama Siaga",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.49944827,
+        "Bujur":101.45870785,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Test antigen di harga Rp150.000\nPoli umum Rp100.000\nPoli Gigi Rp50.000 - Rp300.000\nPoli Anak Start from Rp.100.000",
+        "Rating":4.5
+    },
+    {
+        "No":14,
+        "Nama Klinik":"Klinik Pratama Nayaka Husada",
+        "Jam Operasional":"08.00\u201321.00",
+        "Lintang":0.4983152,
+        "Bujur":101.45815274,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 100k\nGigi 200k",
+        "Rating":3
+    },
+    {
+        "No":15,
+        "Nama Klinik":"Klinik Pratama Mulya",
+        "Jam Operasional":"07.00\u201322.00",
+        "Lintang":0.4996286,
+        "Bujur":101.46732239,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 100lk\nPoli Gigi  Rp.50.000 - Rp.300.000",
+        "Rating":3.5
+    },
+    {
+        "No":16,
+        "Nama Klinik":"Klinik Pratama Kartika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.49916303,
+        "Bujur":101.46677868,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Untuk poli umum atau poli Gigi \nRp50.000 - Rp200.000",
+        "Rating":4.9
+    },
+    {
+        "No":18,
+        "Nama Klinik":"Klinik Pratama Harapan Medika",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.49991767,
+        "Bujur":101.4743787,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 90k\nGigi 150k",
+        "Rating":4.3
+    },
+    {
+        "No":19,
+        "Nama Klinik":"Klinik Pratama Bina Kasih 2",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.5349864,
+        "Bujur":101.4214215,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Gigi 100k \nUmum 70k",
+        "Rating":4.9
+    },
+    {
+        "No":20,
+        "Nama Klinik":"Klinik Gaia Dental",
+        "Jam Operasional":"09.00\u201321.00",
+        "Lintang":0.53555651,
+        "Bujur":101.44141187,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Bersihkan karang gigi Rp.200.000 - Rp.500.000.\nTambal Gigi Rp.300.000 - Rp.800.000.\nWhitening Rp.1.000.000 - Rp.3.000.000 dan mungkin bisa lebih.\nBehel Rp.5.000.000 - Rp.15.000.000",
+        "Rating":4.9
+    },
+    {
+        "No":22,
+        "Nama Klinik":"Klinik Pratama Dokter Razie",
+        "Jam Operasional":"08.00\u201322.00",
+        "Lintang":0.53826596,
+        "Bujur":101.4367274,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 80k\nGigi 150k\nPersalinan 1jt",
+        "Rating":4.5
+    },
+    {
+        "No":23,
+        "Nama Klinik":"Klinik Pratama Cendana Husada",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.53846948,
+        "Bujur":101.4317503,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"50k - 2jt",
+        "Rating":2.3
+    },
+    {
+        "No":24,
+        "Nama Klinik":"Ms Dental Bakti",
+        "Jam Operasional":"09.00\u201320.30",
+        "Lintang":0.4804898,
+        "Bujur":101.4173626,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"50k - 4jt",
+        "Rating":5
+    },
+    {
+        "No":25,
+        "Nama Klinik":"Auges Dental Esthetic",
+        "Jam Operasional":"09.00 - 21.00 ",
+        "Lintang":0.4806757,
+        "Bujur":101.4187006,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Impan Gigi Rp14.800.00 - Rp35.000.000\nPencabutan gigi Rp310.000 - Rp13.800.000",
+        "Rating":5
+    },
+    {
+        "No":26,
+        "Nama Klinik":"Klinik Pratama Sari Medika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.463891,
+        "Bujur":101.400208,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Umum 60k - 70k",
+        "Rating":2.9
+    },
+    {
+        "No":27,
+        "Nama Klinik":"Klinik Pratama Shinta Medika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.4637681,
+        "Bujur":101.4001177,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"50k - 1jt",
+        "Rating":5
+    },
+    {
+        "No":28,
+        "Nama Klinik":"Klinik Pratama Yasmin Medika 2",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.463892,
+        "Bujur":101.3987078,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 60K\nGigi 80K\nBidan sesuai arahan dokter",
+        "Rating":3.9
+    },
+    {
+        "No":29,
+        "Nama Klinik":"Klinik Sansani",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.4638478,
+        "Bujur":101.3896537,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Poli gigi 300k\nPoli umum 50k",
+        "Rating":2.7
+    },
+    {
+        "No":30,
+        "Nama Klinik":"Klinik 24 Jam Dokter Hasni",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.4641313,
+        "Bujur":101.3877808,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Umum 60k - 75k",
+        "Rating":4.7
+    },
+    {
+        "No":31,
+        "Nama Klinik":"Klinik Pratama Selvia Medika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.463938,
+        "Bujur":101.3835434,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 40k \nGigi 0k - 50k",
+        "Rating":2.8
+    },
+    {
+        "No":32,
+        "Nama Klinik":"Klinik Pratama Nadin Medika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.4647292,
+        "Bujur":101.3646865,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Umum 50k\nGigi 50k",
+        "Rating":3.8
+    },
+    {
+        "No":33,
+        "Nama Klinik":"Klinik Dokter Hasni",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.46447026,
+        "Bujur":101.38979591,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Start from 50k",
+        "Rating":4.3
+    },
+    {
+        "No":34,
+        "Nama Klinik":"Klinik Pratama Sentral Medikal Utama",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5165506,
+        "Bujur":101.44234789,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":4.9
+    },
+    {
+        "No":35,
+        "Nama Klinik":"Klinik Abdul Hady",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5696794,
+        "Bujur":101.4219628,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":3.5
+    },
+    {
+        "No":36,
+        "Nama Klinik":"UNILAK MEDICAL CENTRE",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.56921997,
+        "Bujur":101.42344048,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":4.8
+    },
+    {
+        "No":37,
+        "Nama Klinik":"KLINIK Dr. EKA",
+        "Jam Operasional":"08.30 - 21.00 ",
+        "Lintang":0.5619141,
+        "Bujur":101.4330721,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":4.8
+    },
+    {
+        "No":38,
+        "Nama Klinik":"Klinik Pratama Mitra Sehat Medika",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.5365742,
+        "Bujur":101.4214679,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":4.2
+    },
+    {
+        "No":39,
+        "Nama Klinik":"Klinik Pratama Fajar Medika",
+        "Jam Operasional":"08.00 - 22.00 ",
+        "Lintang":0.5110368,
+        "Bujur":101.4065704,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":5
+    },
+    {
+        "No":40,
+        "Nama Klinik":"Klinik Pratama Mysha Medika",
+        "Jam Operasional":"08.00 - 21.00 ",
+        "Lintang":0.5166751,
+        "Bujur":101.4406828,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Start from 150k",
+        "Rating":5
+    },
+    {
+        "No":41,
+        "Nama Klinik":"Klinik Kartika Utama",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.52206683,
+        "Bujur":101.44258988,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":3.8
+    },
+    {
+        "No":42,
+        "Nama Klinik":"Klinik Pratama Bina Kasih 2",
+        "Jam Operasional":"08.00\u201321.00",
+        "Lintang":0.53498616,
+        "Bujur":101.42142189,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":4.9
+    },
+    {
+        "No":43,
+        "Nama Klinik":"KLINIK PRATAMA UES MEDIKA",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.47587092,
+        "Bujur":101.44765979,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Start from 100k",
+        "Rating":5
+    },
+    {
+        "No":44,
+        "Nama Klinik":"Klinik Pratama Medikatan",
+        "Jam Operasional":"09.00\u201317.30",
+        "Lintang":0.4961116,
+        "Bujur":101.4386453,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Start from 100k",
+        "Rating":4.7
+    },
+    {
+        "No":45,
+        "Nama Klinik":"Paus Medika Sigungung Primary Clinic",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.5173435,
+        "Bujur":101.4156091,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 150k",
+        "Rating":3.8
+    },
+    {
+        "No":46,
+        "Nama Klinik":"Klinik Pratama Dewi Sehat",
+        "Jam Operasional":"08.00\u201321.00",
+        "Lintang":0.51728251,
+        "Bujur":101.42286114,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":4.6
+    },
+    {
+        "No":47,
+        "Nama Klinik":"Praktek Dokter spesialis BUAH HATI",
+        "Jam Operasional":"09.00\u201321.00",
+        "Lintang":0.51698252,
+        "Bujur":101.4189835,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 150k",
+        "Rating":5
+    },
+    {
+        "No":48,
+        "Nama Klinik":"Klinik Pratama Umri",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.49953,
+        "Bujur":101.4151111,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 50k",
+        "Rating":4.9
+    },
+    {
+        "No":49,
+        "Nama Klinik":"Klinik Pratama Nuansa Medika",
+        "Jam Operasional":"08.00\u201322.00",
+        "Lintang":0.4974256,
+        "Bujur":101.4635491,
+        "BPJS\/tidak BPJS":"Tidak BPJS",
+        "Harga":"Start from 100k",
+        "Rating":5
+    },
+    {
+        "No":50,
+        "Nama Klinik":"Klinik Hangtuah Medika",
+        "Jam Operasional":"Buka 24 jam",
+        "Lintang":0.50060637,
+        "Bujur":101.46674113,
+        "BPJS\/tidak BPJS":"BPJS",
+        "Harga":"Start from 100k",
+        "Rating":3.8
+    }
+]

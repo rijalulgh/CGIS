@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Klinik;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class KlinikController extends Controller
 {
@@ -73,5 +74,49 @@ class KlinikController extends Controller
         return response()->json([
             'message' => 'Data klinik berhasil dihapus'
         ]);
+    }
+    public function getKlinikData()
+    {
+        // Ambil semua data dari tabel klinik
+        $kliniks = Klinik::all();
+
+        // Transformasikan data JSON ke GeoJSON
+        $features = [];
+        foreach ($kliniks as $klinik) {
+            $json = preg_replace('/[[:^print:]]/', '', $klinik);
+            $data = json_decode($json, true); // Decode JSON dari database
+
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                Log::error('JSON Decode Error: ' . json_last_error_msg());
+                continue;
+            }
+            
+            $features[] = [
+                "type" => "Feature",
+                "geometry" => [
+                    "type" => "Point",
+                    "coordinates" => [
+                        $data["data"]["Bujur"], // Longitude
+                        $data["data"]["Lintang"], // Latitude
+                    ],
+                ],
+                "properties" => [
+                    "Nama_Klinik" => $data["data"]["Nama Klinik"],
+                    "Jam_Operasional" => $data["data"]["Jam Operasional"],
+                    "BPJS" => $data["data"]["BPJS/tidak BPJS"],
+                    "Harga" => $data["data"]["Harga"],
+                    "Rating" => $data["data"]["Rating"],
+                ],
+            ];
+        }
+
+        // Bungkus ke dalam FeatureCollection
+        $geoJSON = [
+            "type" => "FeatureCollection",
+            "features" => $features,
+        ];
+
+        // Return dalam format JSON
+        return response()->json($geoJSON);
     }
 }

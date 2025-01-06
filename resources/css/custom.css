@@ -2,6 +2,7 @@ body {
     background-color: #fff7e6;
 }
 
+
 /* Navbar */
 .navbar {
     background-color: #f9b244;
@@ -49,7 +50,7 @@ body {
 .search-section {
     position: absolute; /* Gunakan posisi absolut agar bebas mengatur letak */
     left: 20%; /* Sesuaikan jarak dari tepi kiri */
-    top: 63%; /* Tempatkan di tengah secara vertikal */
+    top: 50%; /* Tempatkan di tengah secara vertikal */
     transform: translateY(-50%); /* Koreksi agar benar-benar di tengah */
     display: flex;
     flex-direction: column;
@@ -141,7 +142,7 @@ h1 {
 .container {
     max-width: 800px;
     margin: auto;
-    padding: 10px;
+    padding: 120px;
     text-align: center;
 }
 
@@ -248,12 +249,8 @@ body {
 .content {
     display: flex;
     justify-content: center;
-    /* Memusatkan grid secara horizontal */
     align-items: center;
-    /* Memusatkan grid secara vertikal */
-    min-height: 20vh;
-    /* Mengisi tinggi layar sepenuhnya */
-    padding: 20px;
+    padding: 120px;
 }
 
 .event-grid {
