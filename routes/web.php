@@ -39,5 +39,9 @@ Route::get('/event', function () {
     return view('event');
 })->name('event');
 
+Route::get('/map', function () {
+    return view('map');
+})->name('map');
+
 
 require __DIR__.'/auth.php';
