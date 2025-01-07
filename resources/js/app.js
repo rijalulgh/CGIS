@@ -75,6 +75,25 @@ const kabRiau = new VectorLayer({
     },
 });
 
+const pekanbaru = new VectorLayer({
+  // background: "#1a2b39",
+  source: new VectorSource({
+      url: "pekanbaru.json",
+      format: new GeoJSON(),
+  }),
+  style: {
+      "fill-color": [
+          "interpolate",
+          ["linear"],
+          ["get", "FID"],
+          1,
+          "#ffff3360",
+          13,
+          "#3358ff60",
+      ],
+  },
+});
+
 const map = new Map({
     overlays: [overlay],
     target: document.getElementById("map"),
@@ -82,11 +101,11 @@ const map = new Map({
         new TileLayer({
             source: new OSM(),
         }),
-
+        pekanbaru
     ],
     view: new View({
         center: fromLonLat([101.458609, 0.51044]),
-        zoom: 12.5,
+        zoom: 13,
     }),
 });
 
@@ -151,83 +170,83 @@ map.on("singleclick", function (evt) {
     }
 });
 
-const featureOverlay = new VectorLayer({
-  source: new VectorSource(),
-  map: map,
-  style: {
-    "stroke-color": "rgba(255, 255, 255, 0.7)",
-    "stroke-width": 2,
-  },
-});
-let highlight;
-const highlightFeature = function (pixel) {
-  const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-    return feature;
-  });
-  if (feature !== highlight) {
-    if (highlight) {
-      featureOverlay.getSource().removeFeature(highlight);
-    }
-    if (feature) {
-      featureOverlay.getSource().addFeature(feature);
-    }
-    highlight = feature;
-  }
-};
-const displayFeatureInfo = function (pixel) {
-  const feature = map.forEachFeatureAtPixel(pixel, function (feat) {
-    return feat;
-  });
-  const info = document.getElementById("info");
-  if (feature) {
-    info.innerHTML = feature.get("Kabupaten") || "&nbsp;";
-  } else {
-    info.innerHTML = "&nbsp;";
-  }
-};
-
-map.on("pointermove", function (evt) {
-  if (evt.dragging) {
-    popup.setPosition(undefined);
-  }
-  const pixel = map.getEventPixel(evt.originalEvent);
-  highlightFeature(pixel);
-  displayFeatureInfo(pixel);
-});
-
-const polygonLayerCheckbox = document.getElementById("polygon");
-const pointLayerCheckbox = document.getElementById("point");
-polygonLayerCheckbox.addEventListener("change", function () {
-  kabRiau.setVisible(polygonLayerCheckbox.checked);
-});
-pointLayerCheckbox.addEventListener("change", function () {
-  banjir.setVisible(pointLayerCheckbox.checked);
-});
-
-map.addOverlay(overlay);
-
-// map.on("singleclick", function (evt) {
-//   const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+// const featureOverlay = new VectorLayer({
+//   source: new VectorSource(),
+//   map: map,
+//   style: {
+//     "stroke-color": "rgba(255, 255, 255, 0.7)",
+//     "stroke-width": 2,
+//   },
+// });
+// let highlight;
+// const highlightFeature = function (pixel) {
+//   const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
 //     return feature;
 //   });
-//   if (!feature) {
-//     return;
+//   if (feature !== highlight) {
+//     if (highlight) {
+//       featureOverlay.getSource().removeFeature(highlight);
+//     }
+//     if (feature) {
+//       featureOverlay.getSource().addFeature(feature);
+//     }
+//     highlight = feature;
 //   }
+// };
+// const displayFeatureInfo = function (pixel) {
+//   const feature = map.forEachFeatureAtPixel(pixel, function (feat) {
+//     return feat;
+//   });
+//   const info = document.getElementById("info");
+//   if (feature) {
+//     info.innerHTML = feature.get("Kabupaten") || "&nbsp;";
+//   } else {
+//     info.innerHTML = "&nbsp;";
+//   }
+// };
 
-//   const coordinate = evt.coordinate;
-//   const content =
-//     "<h3>Nama Daerah: " +
-//     feature.get("Nama_Pemetaan") +
-//     "</h3>" +
-//     "<p>Jumlah Korban: " +
-//     feature.get("Jumlah_Korban") +
-//     "</p>";
-//   content_element.innerHTML = content;
-//   overlay.setPosition(coordinate);
+// map.on("pointermove", function (evt) {
+//   if (evt.dragging) {
+//     popup.setPosition(undefined);
+//   }
+//   const pixel = map.getEventPixel(evt.originalEvent);
+//   highlightFeature(pixel);
+//   displayFeatureInfo(pixel);
 // });
 
-closer.onclick = function () {
-  overlay.setPosition(undefined);
-  closer.blur();
-  return false;
-};
+// const polygonLayerCheckbox = document.getElementById("polygon");
+// const pointLayerCheckbox = document.getElementById("point");
+// polygonLayerCheckbox.addEventListener("change", function () {
+//   kabRiau.setVisible(polygonLayerCheckbox.checked);
+// });
+// pointLayerCheckbox.addEventListener("change", function () {
+//   banjir.setVisible(pointLayerCheckbox.checked);
+// });
+
+// map.addOverlay(overlay);
+
+// // map.on("singleclick", function (evt) {
+// //   const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+// //     return feature;
+// //   });
+// //   if (!feature) {
+// //     return;
+// //   }
+
+// //   const coordinate = evt.coordinate;
+// //   const content =
+// //     "<h3>Nama Daerah: " +
+// //     feature.get("Nama_Pemetaan") +
+// //     "</h3>" +
+// //     "<p>Jumlah Korban: " +
+// //     feature.get("Jumlah_Korban") +
+// //     "</p>";
+// //   content_element.innerHTML = content;
+// //   overlay.setPosition(coordinate);
+// // });
+
+// closer.onclick = function () {
+//   overlay.setPosition(undefined);
+//   closer.blur();
+//   return false;
+// };

@@ -51,9 +51,13 @@ Route::get('/ulasan', function () {
     return view('ulasan');
 })->name('ulasan');
 
-Route::get('/explore/detail', function () {
-    return view('detail');
-})->name('detail');
+Route::get('/explore', function () {
+    return view('klinik.index');
+})->name('explore');
+
+Route::get('/create', function () {
+    return view('klinik.create');
+})->name('create');
 
 
 use App\Http\Controllers\KlinikController;
