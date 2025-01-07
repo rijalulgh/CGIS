@@ -108,67 +108,124 @@ const map = new Map({
         zoom: 13,
     }),
 });
+// Membuat elemen popup
+const popupElement = document.createElement("div");
+popupElement.id = "popup";
+popupElement.className = "ol-popup";
 
-async function fetchKlinikData() {
-    try {
-        const response = await axios.get("/api/klinik-data"); // API endpoint
-        const geoJSONData = response.data; // GeoJSON dari API
-
-        const klinikLayer = new VectorLayer({
-            source: new VectorSource({
-                features: new GeoJSON().readFeatures(geoJSONData, {
-                    dataProjection: "EPSG:4326", // Proyeksi data GeoJSON
-                    featureProjection: "EPSG:3857", // Proyeksi peta OpenLayers
-                }),
-            }),
-            style: new Style({
-                image: new Icon({
-                    anchor: [0.5, 0.5],
-                    src: "/icon/klinik.png", // URL icon klinik
-                    scale: 0.05, // Ukuran icon
-                }),
-            }),
-        });
-
-        // Tambahkan layer ke peta
-        map.addLayer(klinikLayer);
-    } catch (error) {
-        console.error("Error fetching klinik data:", error);
-    }
-}
-
-// Panggil fungsi untuk mengambil data
-fetchKlinikData();
-
-const popup = new Overlay({
-    element: document.getElementById("popup"),
-    positioning: "top-center",
-    stopEvent: false,
-    offset: [0, -15],
+// Membuat overlay popup
+const popupOverlay = new Overlay({
+  element: popupElement,
+  positioning: "bottom-center",
+  stopEvent: false,
+  offset: [0, -10],
 });
-map.addOverlay(popup);
-map.on("singleclick", function (evt) {
-    const feature = map.forEachFeatureAtPixel(evt.pixel, function (feat) {
-        return feat;
+
+// Tambahkan overlay ke peta
+map.addOverlay(popupOverlay);
+
+// Fungsi untuk menampilkan informasi fitur di popup
+const displayPopup = function (pixel) {
+  const feature = map.forEachFeatureAtPixel(pixel, function (feat) {
+    return feat;
+  });
+
+  if (feature) {
+    const coordinates = feature.getGeometry().getCoordinates();
+    const klinikName = feature.get("Nama_Klinik") || "Tidak ada nama";
+    const jamOperasional = feature.get("Jam_Operasional") || "Tidak tersedia";
+    const harga = feature.get("Harga") || "Tidak diketahui";
+
+    // Isi konten popup
+    popupElement.innerHTML = `
+      <div>
+        <strong>${klinikName}</strong><br />
+        Jam Operasional: ${jamOperasional}<br />
+        Harga: ${harga}<br />
+      </div>
+    `;
+
+    // Atur posisi popup
+    popupOverlay.setPosition(coordinates);
+  } else {
+    // Sembunyikan popup jika tidak ada fitur
+    popupOverlay.setPosition(undefined);
+  }
+};
+
+// Event pointermove untuk menampilkan popup
+map.on("pointermove", function (evt) {
+  if (evt.dragging) {
+    popupOverlay.setPosition(undefined);
+    return;
+  }
+
+  const pixel = map.getEventPixel(evt.originalEvent);
+  displayPopup(pixel);
+});
+
+// Fungsi untuk memuat data GeoJSON
+async function fetchKlinikData() {
+  try {
+    const response = await axios.get("/api/klinik-data"); // API endpoint
+    const geoJSONData = response.data; // GeoJSON dari API
+
+    const klinikLayer = new VectorLayer({
+      source: new VectorSource({
+        features: new GeoJSON().readFeatures(geoJSONData, {
+          dataProjection: "EPSG:4326", // Proyeksi data GeoJSON
+          featureProjection: "EPSG:3857", // Proyeksi peta OpenLayers
+        }),
+      }),
+      style: new Style({
+        image: new Icon({
+          anchor: [0.5, 0.5],
+          src: "/icon/klinik.png", // URL icon klinik
+          scale: 0.05, // Ukuran icon
+        }),
+      }),
     });
 
-    if (feature) {
-        const coordinates = feature.getGeometry().getCoordinates();
-        let content = "<h3>Informasi Fitur</h3>";
-        content +=
-            "<p>Nama Daerah: <strong>" +
-            feature.get("Nama_Pemetaan") +
-            "</strong></p>" +
-            "<p>Jumlah Korban: " +
-            feature.get("Jumlah_Korban") +
-            "</p>";
-        document.getElementById("popup-content").innerHTML = content;
+    // Tambahkan layer ke peta
+    map.addLayer(klinikLayer);
+  } catch (error) {
+    console.error("Error fetching klinik data:", error);
+  }
+}
 
-        popup.setPosition(coordinates);
-    } else {
-        popup.setPosition(undefined);
-    }
-});
+// Panggil fungsi fetchKlinikData
+fetchKlinikData();
+
+
+// const popup = new Overlay({
+//     element: document.getElementById("popup"),
+//     positioning: "top-center",
+//     stopEvent: false,
+//     offset: [0, -15],
+// });
+// map.addOverlay(popup);
+// map.on("singleclick", function (evt) {
+//     const feature = map.forEachFeatureAtPixel(evt.pixel, function (feat) {
+//         return feat;
+//     });
+
+//     if (feature) {
+//         const coordinates = feature.getGeometry().getCoordinates();
+//         let content = "<h3>Informasi Fitur</h3>";
+//         content +=
+//             "<p>Nama Daerah: <strong>" +
+//             feature.get("Nama_Pemetaan") +
+//             "</strong></p>" +
+//             "<p>Jumlah Korban: " +
+//             feature.get("Jumlah_Korban") +
+//             "</p>";
+//         document.getElementById("popup-content").innerHTML = content;
+
+//         popup.setPosition(coordinates);
+//     } else {
+//         popup.setPosition(undefined);
+//     }
+// });
 
 // const featureOverlay = new VectorLayer({
 //   source: new VectorSource(),
@@ -213,6 +270,7 @@ map.on("singleclick", function (evt) {
 //   highlightFeature(pixel);
 //   displayFeatureInfo(pixel);
 // });
+
 
 // const polygonLayerCheckbox = document.getElementById("polygon");
 // const pointLayerCheckbox = document.getElementById("point");

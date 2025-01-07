@@ -8,24 +8,50 @@ use Illuminate\Support\Facades\Log;
 
 class KlinikController extends Controller
 {
+    public function index()
+    {
+        // Ambil semua data dari tabel klinik
+        $kliniks = Klinik::all();
+
+        // Kirim data ke view
+        return view('klinik.index', compact('kliniks'));
+    }
+
     // Menambah data baru ke tabel klinik
     public function store(Request $request)
     {
-        // Validasi data yang diterima dari request
+        // Validasi input
         $request->validate([
-            'data' => 'required|json', // Validasi format JSON
+            'nama_klinik' => 'required|string|max:255',
+            'jam_operasional' => 'required|string|max:255',
+            'bpjs' => 'required|string|in:menerima,tidak-menerima',
+            'harga' => 'required|string|max:255',
+            'longitude' => 'required|numeric',
+            'latitude' => 'required|numeric',
         ]);
+        $lastNo = Klinik::max('data->No'); // Mengambil nilai terbesar dari kolom 'No' dalam JSON
+        $nextNo = $lastNo ? $lastNo + 1 : 1;
+        // Format data sebagai JSON
+        $data = [
+            'No' => $nextNo,
+            'Nama Klinik' => $request->nama_klinik,
+            'Jam Operasional' => $request->jam_operasional,
+            'BPJS/tidak BPJS' => $request->bpjs,
+            'Harga' => $request->harga,
+            'Bujur' => (float) $request->longitude,
+            'Lintang' => (float) $request->latitude,
+            'Rating' => 3.5
+        ];
 
-        // Membuat instance Klinik baru dan menyimpan data
+        // Simpan ke database
         $klinik = new Klinik();
-        $klinik->data = json_decode($request->data, true); // Mengonversi JSON menjadi array
+        $klinik->data = $data;
         $klinik->save();
 
-        return response()->json([
-            'message' => 'Data klinik berhasil ditambahkan',
-            'data' => $klinik
-        ], 201);
+        // Kembalikan response atau redirect
+        return redirect()->back()->with('success', 'Data klinik berhasil ditambahkan!');
     }
+
 
     // Mengedit data klinik berdasarkan ID
     public function update(Request $request, $id)
@@ -90,7 +116,7 @@ class KlinikController extends Controller
                 Log::error('JSON Decode Error: ' . json_last_error_msg());
                 continue;
             }
-            
+
             $features[] = [
                 "type" => "Feature",
                 "geometry" => [

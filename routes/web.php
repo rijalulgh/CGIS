@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KlinikController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,10 +33,6 @@ Route::get('/detail', function () {
     return view('detail');
 })->name('detail');
 
-Route::get('/explore', function () {
-    return view('explore');
-})->name('explore');
-
 Route::get('/artikel', function () {
     return view('artikel');
 })->name('artikel');
@@ -51,16 +49,11 @@ Route::get('/ulasan', function () {
     return view('ulasan');
 })->name('ulasan');
 
-Route::get('/explore', function () {
-    return view('klinik.index');
-})->name('explore');
-
 Route::get('/create', function () {
     return view('klinik.create');
 })->name('create');
 
 
-use App\Http\Controllers\KlinikController;
 Route::get('/api/klinik-data', [KlinikController::class, 'getKlinikData']);
 
 // Menambahkan data klinik
@@ -72,6 +65,9 @@ Route::put('/klinik/{id}', [KlinikController::class, 'update']);
 // Menghapus data klinik
 Route::delete('/klinik/{id}', [KlinikController::class, 'destroy']);
 
+Route::post('/klinik/store', [KlinikController::class, 'store'])->name('klinik.store');
 
+
+Route::get('/klinik', [KlinikController::class, 'index'])->name('klinik.index');
 
 require __DIR__.'/auth.php';

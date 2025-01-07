@@ -71,18 +71,26 @@
     </style>
     <div class="container">
         <h2>Form Input Klinik</h2>
-        <form>
+        @if (session('success'))
+            <div style="color: green; margin-bottom: 15px;">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <form action="{{ route('klinik.store') }}" method="POST">
+            @csrf <!-- Token untuk keamanan -->
             <div class="form-group">
                 <label for="nama-klinik">Nama Klinik</label>
-                <input type="text" id="nama-klinik" name="nama-klinik" placeholder="Masukkan nama klinik">
+                <input type="text" id="nama-klinik" name="nama_klinik" placeholder="Masukkan nama klinik" required>
             </div>
             <div class="form-group">
                 <label for="jam-operasional">Jam Operasional</label>
-                <input type="text" id="jam-operasional" name="jam-operasional" placeholder="Contoh: 08:00 - 20:00">
+                <input type="text" id="jam-operasional" name="jam_operasional" placeholder="Contoh: 08:00 - 20:00"
+                    required>
             </div>
             <div class="form-group">
                 <label for="keterangan-bpjs">Keterangan BPJS</label>
-                <select id="keterangan-bpjs" name="keterangan-bpjs">
+                <select id="keterangan-bpjs" name="bpjs" required>
                     <option value="">Pilih...</option>
                     <option value="menerima">Menerima BPJS</option>
                     <option value="tidak-menerima">Tidak Menerima BPJS</option>
@@ -90,20 +98,21 @@
             </div>
             <div class="form-group">
                 <label for="range-harga">Range Harga</label>
-                <input type="text" id="range-harga" name="range-harga" placeholder="Contoh: 50.000 - 200.000">
+                <input type="text" id="range-harga" name="harga" placeholder="Contoh: 50.000 - 200.000" required>
             </div>
             <div class="form-group">
                 <label for="longitude">Longitude</label>
-                <input type="text" id="longitude" name="longitude" placeholder="Masukkan longitude">
+                <input type="text" id="longitude" name="longitude" placeholder="Masukkan longitude" required>
             </div>
             <div class="form-group">
                 <label for="latitude">Latitude</label>
-                <input type="text" id="latitude" name="latitude" placeholder="Masukkan latitude">
+                <input type="text" id="latitude" name="latitude" placeholder="Masukkan latitude" required>
             </div>
             <div class="form-group">
                 <button type="submit">Submit</button>
             </div>
         </form>
+
     </div>
 
 </x-app-layout>
