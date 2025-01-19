@@ -1,5 +1,5 @@
 <x-app-layout>
-    <style>
+    <!-- <style>
     .ol-popup {
             position: absolute;
             background-color: white;
@@ -35,9 +35,7 @@
             left: 50%;
             margin-left: -11px;
         }
-    </style>
-
-    </style>
+    </style> -->
     <div id="map" style="width: 100%; height: 100%;"></div>
     <div id="popup" class="ol-popup"></div>
 </x-app-layout>

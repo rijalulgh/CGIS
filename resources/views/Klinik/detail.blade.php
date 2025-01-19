@@ -12,7 +12,8 @@
             width: 90%;
             max-width: 1200px;
             margin: 20px auto;
-            display: flex;
+            display: contents;
+            align-items: center;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -25,6 +26,12 @@
             overflow: hidden;
             padding: 20px;
             flex: 1;
+        }
+
+        .event-card {
+            width: 500px;
+            /* Lebar konsisten */
+            height: fit-content;
         }
 
         .card img {
@@ -187,23 +194,26 @@
         }
     </style>
     <main class="content">
-        <div class="event-grid">
-            @foreach ($klinik as $klinik)
-                <a href="{{ route('klinik.show', $klinik->id) }}" class="event-card">
-                    <img src="{{ url('/foto_klinik/'.$klinik->gambar) }}" alt="Event" />
-                    <div class="event-details">
-                        <h3>{{ $klinik->data['Nama Klinik'] }}</h3>
-                        <p>Jam Operasional: {{ $klinik->data['Jam Operasional'] }}</p>
-                        <p>BPJS: {{ $klinik->data['BPJS/tidak BPJS'] }}</p>
-                        <p>Harga: {{ $klinik->data['Harga'] }}</p>
-                        <div class="event-info">
-                            <span>📍 Koordinat: {{ $klinik->data['Lintang'] }}, {{ $klinik->data['Bujur'] }}</span>
-                            <span>⭐ Rating: {{ $klinik->data['Rating'] }}</span>
-                        </div>
-                    </div>
-                </a>
-            @endforeach
+        <div class="event-card">
+            <img src="{{ url('/foto_klinik/'.$klinik->gambar) }}" alt="Klinik" />
+            <div class="event-details">
+                <h3>{{ $klinik->data['Nama Klinik'] }}</h3>
+                <p>Jam Operasional: {{ $klinik->data['Jam Operasional'] }}</p>
+                <p>BPJS: {{ $klinik->data['BPJS/tidak BPJS'] }}</p>
+                <p>Harga: {{ $klinik->data['Harga'] }}</p>
+                <div class="event-info">
+                    <span>📍 Koordinat: {{ $klinik->data['Lintang'] }}, {{ $klinik->data['Bujur'] }}</span>
+                    <span>⭐ Rating: {{ $klinik->data['Rating'] }}</span>
+                </div>
+                <a href="{{ route('klinik.edit', ['id' => $klinik->id]) }}">Edit</a>
+                <form action="{{ route('klinik.destroy', ['id' => $klinik->id]) }}" method="POST"
+                    onsubmit="return confirm('Apakah Anda yakin ingin menghapus klinik ini?')">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                        style="color: red; background: none; border: none; cursor: pointer;">Hapus</button>
+                </form>
+            </div>
         </div>
     </main>
-
 </x-app-layout>

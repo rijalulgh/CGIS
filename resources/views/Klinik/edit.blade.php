@@ -70,49 +70,51 @@
         }
     </style>
     <div class="container">
-        <h2>Form Input Klinik</h2>
+        <h2>Edit Data Klinik</h2>
         @if (session('success'))
             <div style="color: green; margin-bottom: 15px;">
                 {{ session('success') }}
             </div>
         @endif
 
-        <form action="{{ route('klinik.store') }}" method="POST">
-            @csrf <!-- Token untuk keamanan -->
+        <form action="{{ route('klinik.update', $klinik->id) }}" method="POST">
+            @csrf <!-- Token keamanan -->
             <div class="form-group">
                 <label for="nama-klinik">Nama Klinik</label>
-                <input type="text" id="nama-klinik" name="nama_klinik" placeholder="Masukkan nama klinik" required>
+                <input type="text" id="nama-klinik" name="nama_klinik" value="{{ $klinik->data['Nama Klinik'] }}"
+                    required>
             </div>
             <div class="form-group">
                 <label for="jam-operasional">Jam Operasional</label>
-                <input type="text" id="jam-operasional" name="jam_operasional" placeholder="Contoh: 08:00 - 20:00"
-                    required>
+                <input type="text" id="jam-operasional" name="jam_operasional"
+                    value="{{ $klinik->data['Jam Operasional'] }}" required>
             </div>
             <div class="form-group">
                 <label for="keterangan-bpjs">Keterangan BPJS</label>
                 <select id="keterangan-bpjs" name="bpjs" required>
-                    <option value="">Pilih...</option>
-                    <option value="menerima">Menerima BPJS</option>
-                    <option value="tidak-menerima">Tidak Menerima BPJS</option>
+                    <option value="menerima" {{ $klinik->data['BPJS/tidak BPJS'] == 'menerima' ? 'selected' : '' }}>
+                        Menerima BPJS
+                    </option>
+                    <option value="tidak-menerima"
+                        {{ $klinik->data['BPJS/tidak BPJS'] == 'tidak-menerima' ? 'selected' : '' }}>Tidak Menerima BPJS
+                    </option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="range-harga">Range Harga</label>
-                <input type="text" id="range-harga" name="harga" placeholder="Contoh: 50.000 - 200.000" required>
+                <input type="text" id="range-harga" name="harga" value="{{ $klinik->data['Harga'] }}" required>
             </div>
             <div class="form-group">
                 <label for="longitude">Longitude</label>
-                <input type="text" id="longitude" name="longitude" placeholder="Masukkan longitude" required>
+                <input type="text" id="longitude" name="longitude" value="{{ $klinik->data['Bujur'] }}" required>
             </div>
             <div class="form-group">
                 <label for="latitude">Latitude</label>
-                <input type="text" id="latitude" name="latitude" placeholder="Masukkan latitude" required>
+                <input type="text" id="latitude" name="latitude" value="{{ $klinik->data['Lintang'] }}" required>
             </div>
             <div class="form-group">
-                <button type="submit">Submit</button>
+                <button type="submit">Update</button>
             </div>
         </form>
-
     </div>
-
 </x-app-layout>

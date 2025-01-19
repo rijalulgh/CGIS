@@ -5,8 +5,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5620424109,
         "Bujur":101.4329117321,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Bisa rawat inap, \nUmum start 50\nSpesialis start 120\nTindak lanjut bisa rawat inap",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":"3,6"
     },
     {
@@ -15,8 +15,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5670203491,
         "Bujur":101.449391225,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":"3,0"
     },
     {
@@ -25,8 +25,8 @@
         "Jam Operasional":"07.30\u201322.30",
         "Lintang":0.5716549774,
         "Bujur":101.4497345478,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":"3,2"
     },
     {
@@ -35,8 +35,8 @@
         "Jam Operasional":"17.00-18.00",
         "Lintang":0.5625573703,
         "Bujur":101.450249532,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"UGD start from 30\nPoli gigi 50\nPoli anak 100\nUsg 2d 130\nUsg 4d 150\nVag 170",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 30k",
         "Rating":"5,0"
     },
     {
@@ -45,8 +45,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5702817546,
         "Bujur":101.4430397538,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Poli spesialis 120 umum\nIGD 120 gada BPJS\nKesehatan sekelutuhan 65k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 65k",
         "Rating":"4,7"
     },
     {
@@ -55,8 +55,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5623857172,
         "Bujur":101.4456146746,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Cek kesehatan 30 \nKarang gigi start 200\nBelobang start 150\nUmum start 50",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 30k",
         "Rating":"2,5"
     },
     {
@@ -65,8 +65,8 @@
         "Jam Operasional":"09.30\u201321.00",
         "Lintang":0.5605603199,
         "Bujur":101.4335191058,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Tambal gigi start 200\nKarang gigi start 150",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 150k",
         "Rating":"baru buka seminggu"
     },
     {
@@ -75,8 +75,8 @@
         "Jam Operasional":"08.00\u201321.00",
         "Lintang":0.5650978573,
         "Bujur":101.4313458728,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50, klo kek biasa atau umum atau kitanan itu kerja sama dan pasien yg kesana",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":"2,0"
     },
     {
@@ -85,8 +85,8 @@
         "Jam Operasional":"06:00 - 21:00",
         "Lintang":0.50107308,
         "Bujur":101.45295042,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from Rp100.000 - 11.000.000\nJuga tersedia Paket Blue dan Silver dan Paket Gold hingga platinum mulai dari Rp1.000.000",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":3.8
     },
     {
@@ -95,8 +95,8 @@
         "Jam Operasional":"15.00\u201320.00",
         "Lintang":0.53892305,
         "Bujur":101.42136072,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Periksa kehamilan (USG) berkisar Rp100.000 - Rp500.000",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 100k",
         "Rating":5
     },
     {
@@ -105,8 +105,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5127949,
         "Bujur":101.4611877,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Untuk General Check-Up Start from Rp.150.000",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 150k",
         "Rating":4.6
     },
     {
@@ -115,8 +115,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.49944827,
         "Bujur":101.45870785,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Test antigen di harga Rp150.000\nPoli umum Rp100.000\nPoli Gigi Rp50.000 - Rp300.000\nPoli Anak Start from Rp.100.000",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":4.5
     },
     {
@@ -125,8 +125,8 @@
         "Jam Operasional":"08.00\u201321.00",
         "Lintang":0.4983152,
         "Bujur":101.45815274,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 100k\nGigi 200k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":3
     },
     {
@@ -135,8 +135,8 @@
         "Jam Operasional":"07.00\u201322.00",
         "Lintang":0.4996286,
         "Bujur":101.46732239,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 100lk\nPoli Gigi  Rp.50.000 - Rp.300.000",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":3.5
     },
     {
@@ -145,8 +145,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.49916303,
         "Bujur":101.46677868,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Untuk poli umum atau poli Gigi \nRp50.000 - Rp200.000",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":4.9
     },
     {
@@ -155,8 +155,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.49991767,
         "Bujur":101.4743787,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 90k\nGigi 150k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 90k",
         "Rating":4.3
     },
     {
@@ -165,8 +165,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.5349864,
         "Bujur":101.4214215,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Gigi 100k \nUmum 70k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 70k",
         "Rating":4.9
     },
     {
@@ -175,8 +175,8 @@
         "Jam Operasional":"09.00\u201321.00",
         "Lintang":0.53555651,
         "Bujur":101.44141187,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Bersihkan karang gigi Rp.200.000 - Rp.500.000.\nTambal Gigi Rp.300.000 - Rp.800.000.\nWhitening Rp.1.000.000 - Rp.3.000.000 dan mungkin bisa lebih.\nBehel Rp.5.000.000 - Rp.15.000.000",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 200k",
         "Rating":4.9
     },
     {
@@ -185,8 +185,8 @@
         "Jam Operasional":"08.00\u201322.00",
         "Lintang":0.53826596,
         "Bujur":101.4367274,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 80k\nGigi 150k\nPersalinan 1jt",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 80k",
         "Rating":4.5
     },
     {
@@ -195,8 +195,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.53846948,
         "Bujur":101.4317503,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"50k - 2jt",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":2.3
     },
     {
@@ -205,8 +205,8 @@
         "Jam Operasional":"09.00\u201320.30",
         "Lintang":0.4804898,
         "Bujur":101.4173626,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"50k - 4jt",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 50k",
         "Rating":5
     },
     {
@@ -215,8 +215,8 @@
         "Jam Operasional":"09.00 - 21.00 ",
         "Lintang":0.4806757,
         "Bujur":101.4187006,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Impan Gigi Rp14.800.00 - Rp35.000.000\nPencabutan gigi Rp310.000 - Rp13.800.000",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 310k",
         "Rating":5
     },
     {
@@ -225,8 +225,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.463891,
         "Bujur":101.400208,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Umum 60k - 70k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 60k",
         "Rating":2.9
     },
     {
@@ -235,8 +235,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.4637681,
         "Bujur":101.4001177,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"50k - 1jt",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 50k",
         "Rating":5
     },
     {
@@ -245,8 +245,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.463892,
         "Bujur":101.3987078,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 60K\nGigi 80K\nBidan sesuai arahan dokter",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 60k",
         "Rating":3.9
     },
     {
@@ -255,8 +255,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.4638478,
         "Bujur":101.3896537,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Poli gigi 300k\nPoli umum 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":2.7
     },
     {
@@ -265,8 +265,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.4641313,
         "Bujur":101.3877808,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Umum 60k - 75k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 60k",
         "Rating":4.7
     },
     {
@@ -275,8 +275,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.463938,
         "Bujur":101.3835434,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 40k \nGigi 0k - 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 40k",
         "Rating":2.8
     },
     {
@@ -285,8 +285,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.4647292,
         "Bujur":101.3646865,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Umum 50k\nGigi 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":3.8
     },
     {
@@ -295,8 +295,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.46447026,
         "Bujur":101.38979591,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 50k",
         "Rating":4.3
     },
     {
@@ -305,8 +305,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5165506,
         "Bujur":101.44234789,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":4.9
     },
     {
@@ -315,8 +315,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5696794,
         "Bujur":101.4219628,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":3.5
     },
     {
@@ -325,8 +325,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.56921997,
         "Bujur":101.42344048,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":4.8
     },
     {
@@ -335,8 +335,8 @@
         "Jam Operasional":"08.30 - 21.00 ",
         "Lintang":0.5619141,
         "Bujur":101.4330721,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":4.8
     },
     {
@@ -345,8 +345,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.5365742,
         "Bujur":101.4214679,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":4.2
     },
     {
@@ -355,8 +355,8 @@
         "Jam Operasional":"08.00 - 22.00 ",
         "Lintang":0.5110368,
         "Bujur":101.4065704,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":5
     },
     {
@@ -365,8 +365,8 @@
         "Jam Operasional":"08.00 - 21.00 ",
         "Lintang":0.5166751,
         "Bujur":101.4406828,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Start from 150k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 150k",
         "Rating":5
     },
     {
@@ -375,8 +375,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.52206683,
         "Bujur":101.44258988,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":3.8
     },
     {
@@ -385,8 +385,8 @@
         "Jam Operasional":"08.00\u201321.00",
         "Lintang":0.53498616,
         "Bujur":101.42142189,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":4.9
     },
     {
@@ -395,8 +395,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.47587092,
         "Bujur":101.44765979,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 100k",
         "Rating":5
     },
     {
@@ -405,8 +405,8 @@
         "Jam Operasional":"09.00\u201317.30",
         "Lintang":0.4961116,
         "Bujur":101.4386453,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 100k",
         "Rating":4.7
     },
     {
@@ -415,8 +415,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.5173435,
         "Bujur":101.4156091,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 150k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 150k",
         "Rating":3.8
     },
     {
@@ -425,8 +425,8 @@
         "Jam Operasional":"08.00\u201321.00",
         "Lintang":0.51728251,
         "Bujur":101.42286114,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":4.6
     },
     {
@@ -435,8 +435,8 @@
         "Jam Operasional":"09.00\u201321.00",
         "Lintang":0.51698252,
         "Bujur":101.4189835,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 150k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 150k",
         "Rating":5
     },
     {
@@ -445,8 +445,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.49953,
         "Bujur":101.4151111,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 50k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 50k",
         "Rating":4.9
     },
     {
@@ -455,8 +455,8 @@
         "Jam Operasional":"08.00\u201322.00",
         "Lintang":0.4974256,
         "Bujur":101.4635491,
-        "BPJS\/tidak BPJS":"Tidak BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Tidak",
+        "Harga":"Mulai dari 100k",
         "Rating":5
     },
     {
@@ -465,8 +465,8 @@
         "Jam Operasional":"Buka 24 jam",
         "Lintang":0.50060637,
         "Bujur":101.46674113,
-        "BPJS\/tidak BPJS":"BPJS",
-        "Harga":"Start from 100k",
+        "BPJS\/tidak BPJS":"Ya",
+        "Harga":"Mulai dari 100k",
         "Rating":3.8
     }
 ]

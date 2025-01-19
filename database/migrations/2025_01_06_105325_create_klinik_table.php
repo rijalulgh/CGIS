@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('klinik', function (Blueprint $table) {
             $table->id();
             $table->json('data');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

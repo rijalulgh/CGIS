@@ -57,7 +57,7 @@ Route::get('/create', function () {
 Route::get('/api/klinik-data', [KlinikController::class, 'getKlinikData']);
 
 // Menambahkan data klinik
-Route::post('/klinik', [KlinikController::class, 'store']);
+Route::post('/klinik', [KlinikController::class, 'store'])->name('klinik.store');
 
 // Mengupdate data klinik
 Route::put('/klinik/{id}', [KlinikController::class, 'update']);
@@ -65,9 +65,17 @@ Route::put('/klinik/{id}', [KlinikController::class, 'update']);
 // Menghapus data klinik
 Route::delete('/klinik/{id}', [KlinikController::class, 'destroy']);
 
-Route::post('/klinik/store', [KlinikController::class, 'store'])->name('klinik.store');
-
-
 Route::get('/klinik', [KlinikController::class, 'index'])->name('klinik.index');
+
+Route::get('/search-klinik', [KlinikController::class, 'search'])->name('search-klinik');
+
+Route::get('/klinik/{id}', [KlinikController::class, 'show'])->name('klinik.show');
+
+Route::get('/klinik/{id}/edit', [KlinikController::class, 'edit'])->name('klinik.edit');
+
+Route::post('/klinik/{id}/edit', [KlinikController::class, 'update'])->name('klinik.update');
+
+Route::delete('/klinik/{id}', [KlinikController::class, 'destroy'])->name('klinik.destroy');
+
 
 require __DIR__.'/auth.php';

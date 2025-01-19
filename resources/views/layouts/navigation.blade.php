@@ -21,14 +21,15 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('klinik.index')" :active="request()->routeIs('klinik')">
-                        {{ __('Explore') }}
-                    </x-nav-link>
-                </div>
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('map')" :active="request()->routeIs('map')">
                         {{ __('Map') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('klinik.index')" :active="request()->routeIs('klinik')">
+                        {{ __('Explore') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -39,6 +40,11 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('event')" :active="request()->routeIs('event')">
                         {{ __('Event') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('create')" :active="request()->routeIs('create')">
+                        {{ __('Tambah klinik') }}
                     </x-nav-link>
                 </div>
             </div>

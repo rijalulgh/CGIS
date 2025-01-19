@@ -11,10 +11,10 @@ class KlinikController extends Controller
     public function index()
     {
         // Ambil semua data dari tabel klinik
-        $kliniks = Klinik::all();
+        $klinik = Klinik::all();
 
         // Kirim data ke view
-        return view('klinik.index', compact('kliniks'));
+        return view('klinik.index', compact('klinik'));
     }
 
     // Menambah data baru ke tabel klinik
@@ -52,34 +52,59 @@ class KlinikController extends Controller
         return redirect()->back()->with('success', 'Data klinik berhasil ditambahkan!');
     }
 
+    public function edit($id)
+    {
+        // Cari klinik berdasarkan ID
+        $klinik = Klinik::find($id);
 
-    // Mengedit data klinik berdasarkan ID
+        // Jika tidak ditemukan, kembalikan halaman 404
+        if (!$klinik) {
+            abort(404, 'Klinik tidak ditemukan');
+        }
+
+        // Kirim data ke view
+        return view('klinik.edit', compact('klinik'));
+    }
+
     public function update(Request $request, $id)
     {
-        // Validasi data yang diterima dari request
+        // Validasi data yang diterima
         $request->validate([
-            'data' => 'required|json', // Validasi format JSON
+            'nama_klinik' => 'required|string|max:255',
+            'jam_operasional' => 'required|string|max:255',
+            'bpjs' => 'required|string|in:menerima,tidak-menerima',
+            'harga' => 'required|string|max:255',
+            'longitude' => 'required|numeric',
+            'latitude' => 'required|numeric',
         ]);
 
-        // Mencari data klinik berdasarkan ID
+        // Cari klinik berdasarkan ID
         $klinik = Klinik::find($id);
 
         // Jika tidak ditemukan
         if (!$klinik) {
-            return response()->json([
-                'message' => 'Klinik tidak ditemukan'
-            ], 404);
+            abort(404, 'Klinik tidak ditemukan');
         }
 
-        // Mengupdate data klinik
-        $klinik->data = json_decode($request->data, true); // Mengonversi JSON menjadi array
+        $data = $klinik->data;
+
+        // Update data
+        $data['Nama Klinik'] = $request['nama_klinik'];
+        $data['Jam Operasional'] = $request['jam_operasional'];
+        $data['BPJS/tidak BPJS'] = $request['bpjs'];
+        $data['Harga'] = $request['harga'];
+        $data['Bujur'] = (float) $request['longitude'];
+        $data['Lintang'] = (float) $request['latitude'];
+
+        $klinik->data = $data;
+
+        // Simpan perubahan
         $klinik->save();
 
-        return response()->json([
-            'message' => 'Data klinik berhasil diperbarui',
-            'data' => $klinik
-        ]);
+        // Redirect ke halaman sebelumnya dengan pesan sukses
+        return redirect()->back()->with('success', 'Data klinik berhasil diubah!');
     }
+
 
     // Menghapus data klinik berdasarkan ID
     public function destroy($id)
@@ -97,9 +122,7 @@ class KlinikController extends Controller
         // Menghapus data klinik
         $klinik->delete();
 
-        return response()->json([
-            'message' => 'Data klinik berhasil dihapus'
-        ]);
+        return redirect()->route('klinik.index')->with('message', 'Data klinik berhasil dihapus!');
     }
     public function getKlinikData()
     {
@@ -127,6 +150,7 @@ class KlinikController extends Controller
                     ],
                 ],
                 "properties" => [
+                    "id" => $data['id'],
                     "Nama_Klinik" => $data["data"]["Nama Klinik"],
                     "Jam_Operasional" => $data["data"]["Jam Operasional"],
                     "BPJS" => $data["data"]["BPJS/tidak BPJS"],
@@ -145,4 +169,61 @@ class KlinikController extends Controller
         // Return dalam format JSON
         return response()->json($geoJSON);
     }
+    public function search(Request $request)
+    {
+        // Ambil query dari input
+        $query = $request->input('query');
+
+        // Cari klinik berdasarkan nama atau atribut lainnya
+        $kliniks = Klinik::where('data->Nama Klinik', 'LIKE', '%' . $query . '%')->get();
+
+        // Transformasikan ke format GeoJSON
+        $features = [];
+        foreach ($kliniks as $klinik) {
+            $data = $klinik->data;
+
+            $features[] = [
+                "type" => "Feature",
+                "geometry" => [
+                    "type" => "Point",
+                    "coordinates" => [
+                        $data["Bujur"],
+                        $data["Lintang"],
+                    ],
+                ],
+                "properties" => [
+                    "Nama_Klinik" => $data["Nama Klinik"],
+                    "Jam_Operasional" => $data["Jam Operasional"],
+                    "BPJS" => $data["BPJS/tidak BPJS"],
+                    "Harga" => $data["Harga"],
+                    "Rating" => $data["Rating"],
+                ],
+            ];
+        }
+
+        // Bungkus ke dalam FeatureCollection
+        $geoJSON = [
+            "type" => "FeatureCollection",
+            "features" => $features,
+        ];
+
+        // Return hasil pencarian dalam format JSON
+        return response()->json($geoJSON);
+    }
+
+    public function show($id)
+    {
+        // Cari klinik berdasarkan ID
+        $klinik = Klinik::find($id);
+
+        // Jika tidak ditemukan, kembalikan halaman 404
+        if (!$klinik) {
+            abort(404, 'Klinik tidak ditemukan');
+        }
+
+        // Kirim data ke view
+        return view('klinik.detail', compact('klinik'));
+    }
+
+
 }

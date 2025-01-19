@@ -18,30 +18,6 @@ import { Icon, Style } from "ol/style.js";
 
 import axios from "axios"; // Jika menggunakan Axios
 
-const riau = new VectorLayer({
-    source: new VectorSource({
-        format: new GeoJSON(),
-        url: "data/polygon_riau.json",
-    }),
-});
-
-const klinik = new VectorLayer({
-    source: new VectorSource({
-        format: new GeoJSON(),
-        url: "data/klinik.json",
-    }),
-    style: new Style({
-        image: new Icon({
-            anchor: [0.5, 46],
-            anchorXUnits: "flaticon",
-            anchorYUnits: "pixels",
-            src: "icon/klinik.png",
-            width: 32,
-            height: 32,
-        }),
-    }),
-});
-
 const container = document.getElementById("popup");
 const content_element = document.getElementById("popup-content");
 const closer = document.getElementById("popup-closer");
@@ -76,22 +52,22 @@ const kabRiau = new VectorLayer({
 });
 
 const pekanbaru = new VectorLayer({
-  // background: "#1a2b39",
-  source: new VectorSource({
-      url: "pekanbaru.json",
-      format: new GeoJSON(),
-  }),
-  style: {
-      "fill-color": [
-          "interpolate",
-          ["linear"],
-          ["get", "FID"],
-          1,
-          "#ffff3360",
-          13,
-          "#3358ff60",
-      ],
-  },
+    // background: "#1a2b39",
+    source: new VectorSource({
+        url: "pekanbaru.json",
+        format: new GeoJSON(),
+    }),
+    style: {
+        "fill-color": [
+            "interpolate",
+            ["linear"],
+            ["get", "FID"],
+            1,
+            "#ffff3360",
+            13,
+            "#3358ff60",
+        ],
+    },
 });
 
 const map = new Map({
@@ -101,7 +77,7 @@ const map = new Map({
         new TileLayer({
             source: new OSM(),
         }),
-        pekanbaru
+        pekanbaru,
     ],
     view: new View({
         center: fromLonLat([101.458609, 0.51044]),
@@ -115,10 +91,10 @@ popupElement.className = "ol-popup";
 
 // Membuat overlay popup
 const popupOverlay = new Overlay({
-  element: popupElement,
-  positioning: "bottom-center",
-  stopEvent: false,
-  offset: [0, -10],
+    element: popupElement,
+    positioning: "bottom-center",
+    stopEvent: false,
+    offset: [0, -10],
 });
 
 // Tambahkan overlay ke peta
@@ -126,76 +102,100 @@ map.addOverlay(popupOverlay);
 
 // Fungsi untuk menampilkan informasi fitur di popup
 const displayPopup = function (pixel) {
-  const feature = map.forEachFeatureAtPixel(pixel, function (feat) {
-    return feat;
-  });
+    const feature = map.forEachFeatureAtPixel(pixel, function (feat) {
+        return feat;
+    });
 
-  if (feature) {
-    const coordinates = feature.getGeometry().getCoordinates();
-    const klinikName = feature.get("Nama_Klinik") || "Tidak ada nama";
-    const jamOperasional = feature.get("Jam_Operasional") || "Tidak tersedia";
-    const harga = feature.get("Harga") || "Tidak diketahui";
+    if (feature) {
+        const coordinates = feature.getGeometry().getCoordinates();
+        const klinikName = feature.get("Nama_Klinik") || null;
+        const jamOperasional =
+            feature.get("Jam_Operasional") || null;
+        const harga = feature.get("Harga") || null;
 
-    // Isi konten popup
-    popupElement.innerHTML = `
-      <div>
-        <strong>${klinikName}</strong><br />
-        Jam Operasional: ${jamOperasional}<br />
-        Harga: ${harga}<br />
-      </div>
-    `;
+        if (klinikName && jamOperasional && harga) {
+            // Isi konten popup
+            popupElement.innerHTML = `
+        <div>
+          <strong>${klinikName}</strong><br />
+          Jam Operasional: ${jamOperasional}<br />
+          Harga: ${harga}<br />
+        </div>
+      `;
+            // Atur posisi popup
+            popupOverlay.setPosition(coordinates);
+        } else {
+            popupElement.innerHTML = null;
+            // Sembunyikan popup jika data tidak tersedia
+            popupOverlay.setPosition(pixel);
+        }
 
-    // Atur posisi popup
-    popupOverlay.setPosition(coordinates);
-  } else {
-    // Sembunyikan popup jika tidak ada fitur
-    popupOverlay.setPosition(undefined);
-  }
+        // Atur posisi popup
+        popupOverlay.setPosition(coordinates);
+    } else {
+        // Sembunyikan popup jika tidak ada fitur
+        popupOverlay.setPosition(undefined);
+    }
 };
 
 // Event pointermove untuk menampilkan popup
 map.on("pointermove", function (evt) {
-  if (evt.dragging) {
-    popupOverlay.setPosition(undefined);
-    return;
-  }
+    if (evt.dragging) {
+        popupOverlay.setPosition(undefined);
+        return;
+    }
 
-  const pixel = map.getEventPixel(evt.originalEvent);
-  displayPopup(pixel);
+    const pixel = map.getEventPixel(evt.originalEvent);
+    displayPopup(pixel);
 });
 
 // Fungsi untuk memuat data GeoJSON
 async function fetchKlinikData() {
-  try {
-    const response = await axios.get("/api/klinik-data"); // API endpoint
-    const geoJSONData = response.data; // GeoJSON dari API
+    try {
+        const response = await axios.get("/api/klinik-data"); // API endpoint
+        const geoJSONData = response.data; // GeoJSON dari API
 
-    const klinikLayer = new VectorLayer({
-      source: new VectorSource({
-        features: new GeoJSON().readFeatures(geoJSONData, {
-          dataProjection: "EPSG:4326", // Proyeksi data GeoJSON
-          featureProjection: "EPSG:3857", // Proyeksi peta OpenLayers
-        }),
-      }),
-      style: new Style({
-        image: new Icon({
-          anchor: [0.5, 0.5],
-          src: "/icon/klinik.png", // URL icon klinik
-          scale: 0.05, // Ukuran icon
-        }),
-      }),
-    });
+        const klinikLayer = new VectorLayer({
+            source: new VectorSource({
+                features: new GeoJSON().readFeatures(geoJSONData, {
+                    dataProjection: "EPSG:4326", // Proyeksi data GeoJSON
+                    featureProjection: "EPSG:3857", // Proyeksi peta OpenLayers
+                }),
+            }),
+            style: new Style({
+                image: new Icon({
+                    anchor: [0.5, 0.5],
+                    src: "/icon/klinik.png", // URL icon klinik
+                    scale: 0.05, // Ukuran icon
+                }),
+            }),
+        });
 
-    // Tambahkan layer ke peta
-    map.addLayer(klinikLayer);
-  } catch (error) {
-    console.error("Error fetching klinik data:", error);
-  }
+        // Tambahkan layer ke peta
+        map.addLayer(klinikLayer);
+        map.on("singleclick", function (evt) {
+
+          console.log('ha')
+          const feature = map.forEachFeatureAtPixel(evt.pixel, function (feat) {
+              return feat;
+          });
+
+          if (feature) {
+              const klinikId = feature.get("id"); // Ambil ID dari properti fitur
+              if (klinikId) {
+                console.log('ha')
+                  // Arahkan ke route berdasarkan ID klinik
+                  window.location.href = `/klinik/${klinikId}`;
+              }
+          }
+      });
+    } catch (error) {
+        console.error("Error fetching klinik data:", error);
+    }
 }
 
 // Panggil fungsi fetchKlinikData
 fetchKlinikData();
-
 
 // const popup = new Overlay({
 //     element: document.getElementById("popup"),
@@ -270,7 +270,6 @@ fetchKlinikData();
 //   highlightFeature(pixel);
 //   displayFeatureInfo(pixel);
 // });
-
 
 // const polygonLayerCheckbox = document.getElementById("polygon");
 // const pointLayerCheckbox = document.getElementById("point");

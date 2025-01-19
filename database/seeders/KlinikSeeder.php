@@ -24,6 +24,7 @@ class KlinikSeeder extends Seeder
         foreach ($jsonData as $data) {
             DB::table('klinik')->insert([
                 'data' => json_encode($data), // Simpan sebagai JSON
+                'gambar' => $data['Nama Klinik'].'.jpg',
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
